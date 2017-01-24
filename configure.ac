@@ -24,6 +24,8 @@ m4_ifdef([AM_SILENT_RULES], [AM_SILENT_RULES([yes])])
 AC_CONFIG_SRCDIR([src])
 AC_CONFIG_HEADER([config.h])
 
+AC_DEFINE([_GNU_SOURCE], [], [We want GNU extensions])
+
 AC_ARG_ENABLE([tools],
 	[AC_HELP_STRING([--enable-tools],
 		[enable libgpiod command-line tools [default=no]])],
@@ -54,6 +56,7 @@ AC_CHECK_FUNC([daemon], [], [AC_MSG_ERROR([daemon() unavailable])])
 AC_CHECK_FUNC([signalfd], [], [AC_MSG_ERROR([signalfd() unavailable])])
 
 AC_FUNC_MALLOC
+AC_FUNC_STRERROR_R
 
 AC_CHECK_HEADERS([getopt.h], [], [AC_MSG_ERROR([getopt.h header not found])])
 AC_CHECK_HEADERS([stdint.h], [], [AC_MSG_ERROR([stdint.h header not found])])
