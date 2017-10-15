@@ -338,7 +338,7 @@ static void line_misc_flags(void)
 	TEST_ASSERT_FALSE(gpiod_line_is_open_drain(line));
 	TEST_ASSERT_FALSE(gpiod_line_is_open_source(line));
 
-	config.direction = GPIOD_DIRECTION_INPUT;
+	config.direction = GPIOD_DIRECTION_OUTPUT;
 	config.consumer = TEST_CONSUMER;
 	config.active_state = GPIOD_ACTIVE_STATE_HIGH;
 	config.flags = GPIOD_REQUEST_OPEN_DRAIN;
