@@ -1071,6 +1071,8 @@ struct gpiod_chip * gpiod_chip_open_by_label(const char *label)
 		}
 	}
 
+	errno = ENOENT;
+
 out:
 	gpiod_chip_iter_free(iter);
 	return  NULL;
