@@ -117,6 +117,7 @@ static void chip_open_by_label_bad(void)
 
 	chip = gpiod_chip_open_by_label("nonexistent_gpio_chip");
 	TEST_ASSERT_NULL(chip);
+	TEST_ASSERT_EQ(gpiod_errno(), ENOENT);
 }
 TEST_DEFINE(chip_open_by_label_bad,
 	    "gpiod_chip_open_by_label() - bad",

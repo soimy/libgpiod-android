@@ -1071,7 +1071,7 @@ struct gpiod_chip * gpiod_chip_open_by_label(const char *label)
 		}
 	}
 
-	errno = ENOENT;
+	set_last_error(ENOENT);
 
 out:
 	gpiod_chip_iter_free(iter);
