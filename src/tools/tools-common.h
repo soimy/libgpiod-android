@@ -20,13 +20,14 @@
  */
 
 #define UNUSED			__attribute__((unused))
+#define NORETURN		__attribute__((noreturn))
 #define PRINTF(fmt, arg)	__attribute__((format(printf, fmt, arg)))
 #define ARRAY_SIZE(x)		(sizeof(x) / sizeof(*(x)))
 
 void set_progname(char *name);
 const char * get_progname(void);
-void die(const char *fmt, ...);
-void die_perror(const char *fmt, ...);
+void die(const char *fmt, ...) NORETURN PRINTF(1, 2);
+void die_perror(const char *fmt, ...) NORETURN PRINTF(1, 2);
 void print_version(void);
 
 #endif /* __GPIOD_TOOLS_COMMON_H__ */

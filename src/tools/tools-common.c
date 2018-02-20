@@ -18,8 +18,6 @@
 #include <stdarg.h>
 #include <libgen.h>
 
-#define NORETURN		__attribute__((noreturn))
-
 static char *progname = "unknown";
 
 void set_progname(char *name)
@@ -32,7 +30,7 @@ const char * get_progname(void)
 	return progname;
 }
 
-void NORETURN PRINTF(1, 2) die(const char *fmt, ...)
+void die(const char *fmt, ...)
 {
 	va_list va;
 
@@ -45,7 +43,7 @@ void NORETURN PRINTF(1, 2) die(const char *fmt, ...)
 	exit(EXIT_FAILURE);
 }
 
-void NORETURN PRINTF(1, 2) die_perror(const char *fmt, ...)
+void die_perror(const char *fmt, ...)
 {
 	va_list va;
 
