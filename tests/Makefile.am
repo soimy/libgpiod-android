@@ -38,7 +38,7 @@ check: check-am
 	@echo " ********************************************************"
 	@echo " * Tests have been built as tests/gpio-test.            *"
 	@echo " *                                                      *"
-	@echo " * They require linux kernel version >=v4.12.6 and the  *"
+	@echo " * They require linux kernel version >=v4.16 and the    *"
 	@echo " * gpio-mockup module (must not be built-in).           *"
 	@echo " *                                                      *"
 	@echo " * Run the test executable with superuser privileges or *"

@@ -30,9 +30,9 @@ static void gpioinfo_dump_all_chips(void)
 				 test_build_str("%s - 8 lines:",
 						test_chip_name(1)));
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
-				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
-				"\\s+line\\s+7:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				"\\s+line\\s+7:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 }
 TEST_DEFINE(gpioinfo_dump_all_chips,
 	    "tools: gpioinfo - dump all chips",
@@ -67,7 +67,7 @@ static void gpioinfo_dump_all_chips_one_exported(void)
 				 test_build_str("%s - 8 lines:",
 						test_chip_name(1)));
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
-				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
 				"\\s+line\\s+7:\\s+unnamed\\s+\\\"" TEST_CONSUMER "\\\"\\s+input\\s+active-low");
 }
@@ -90,9 +90,9 @@ static void gpioinfo_dump_one_chip(void)
 				 test_build_str("%s - 4 lines:",
 						test_chip_name(1)));
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
-				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 	TEST_ASSERT_REGEX_NOMATCH(test_tool_stdout(),
-				  "\\s+line\\s+7:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				  "\\s+line\\s+7:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 }
 TEST_DEFINE(gpioinfo_dump_one_chip,
 	    "tools: gpioinfo - dump one chip",
@@ -120,9 +120,9 @@ static void gpioinfo_dump_all_but_one_chip(void)
 				 test_build_str("%s - 4 lines:",
 						test_chip_name(3)));
 	TEST_ASSERT_REGEX_MATCH(test_tool_stdout(),
-				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				"\\s+line\\s+0:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 	TEST_ASSERT_REGEX_NOMATCH(test_tool_stdout(),
-				  "\\s+line\\s+7:\\s+unnamed\\s+unused\\s+output\\s+active-high");
+				  "\\s+line\\s+7:\\s+unnamed\\s+unused\\s+input\\s+active-high");
 }
 TEST_DEFINE(gpioinfo_dump_all_but_one_chip,
 	    "tools: gpioinfo - dump all but one chip",
