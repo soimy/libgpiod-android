@@ -1,3 +1,12 @@
+libgpiod v1.0.1
+===============
+
+Bug fixes:
+- include Doxyfile in the release tarball
+- fix the implicit-fallthrough warnings
+- make tests work together with gpio-mockup post v4.16 linux kernel
+- use reference counting for line file descriptors
+
 libgpiod v1.0
 =============
 
