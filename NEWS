@@ -1,3 +1,10 @@
+libgpiod v1.0.2
+===============
+
+Bug fixes:
+- fix the copyright notice in tools
+- correctly handle POLLNVAL in gpiod_line_event_wait()
+
 libgpiod v1.0.1
 ===============
 
