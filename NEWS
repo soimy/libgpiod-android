@@ -1,3 +1,13 @@
+libgpiod v1.1.1
+===============
+
+Bug fixes:
+- fix memory leaks in python bindings
+- fix a memory corruption bug in python bindings
+- fix the default_vals argument in line request implementation in python
+  bindings
+- fix a compilation warning in python bindings
+
 libgpiod v1.1
 =============
 
