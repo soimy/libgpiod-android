@@ -1,3 +1,10 @@
+libgpiod v1.1.2
+===============
+
+Bug fixes:
+- fix gpiod_Chip_find_lines() for nonexistent lines (python bindings)
+- add a missing include in C++ bindings examples
+
 libgpiod v1.1.1
 ===============
 
