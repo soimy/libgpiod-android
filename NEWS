@@ -1,3 +1,10 @@
+libgpiod v1.2.1
+===============
+
+Bug fixes:
+- fix a segfault causing bug in C++ bindings
+- make bitset_cmp::operator() const as this is required by C++17
+
 libgpiod v1.2
 =============
 
