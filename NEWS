@@ -1,3 +1,16 @@
+libgpiod v1.4.1
+===============
+
+Bug fixes:
+- fix GCC8 warnings when building python bindings
+- fix a bug in gpioinfo where lines used by the kernel without any consumer
+  string were reported as unused
+- fix a bug in line::event_get_fd() in C++ bindings where the exception
+  wouldn't be throws in error cases due to a missing 'throw' keyword
+- fix a couple bugs in the test-suite
+- disable a failing assertion in the test-suite that stopped working after
+  linux v5.2.7
+
 libgpiod v1.4
 =============
 
