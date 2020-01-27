@@ -1,3 +1,11 @@
+libgpiod v1.4.2
+===============
+
+Bug fixes:
+- fix the major:minor number comparison between the device and sysfs
+- drop noexcept from direction() and active_state() in C++ bindings
+- fix a segfault when calling Line.request() in Python bindings
+
 libgpiod v1.4.1
 ===============
 
