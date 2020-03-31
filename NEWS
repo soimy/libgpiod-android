@@ -1,3 +1,9 @@
+libgpiod v1.4.3
+===============
+
+Bug fixes:
+- relax gpiod_chip_open() for symbolic links
+
 libgpiod v1.4.2
 ===============
 
