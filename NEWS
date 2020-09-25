@@ -1,3 +1,10 @@
+libgpiod v1.5.3
+===============
+
+Bug fixes:
+- fix unit conversion in event timestamp calculation in C++ bindings
+- fix reading subset of available events in core library
+
 libgpiod v1.5.2
 ===============
 
