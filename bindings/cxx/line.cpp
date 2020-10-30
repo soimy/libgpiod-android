@@ -169,8 +169,8 @@ line_event line::event_read(void) const
 		event.event_type = line_event::FALLING_EDGE;
 
 	event.timestamp = ::std::chrono::duration_cast<::std::chrono::nanoseconds>(
-				::std::chrono::seconds(event.ts.tv_sec)) +
-				::std::chrono::nanoseconds(event.ts.tv_nsec);
+				::std::chrono::seconds(event_buf.ts.tv_sec)) +
+				::std::chrono::nanoseconds(event_buf.ts.tv_nsec);
 
 	event.source = *this;
 
