@@ -21,7 +21,11 @@
 
 const char *get_progname(void)
 {
+#if defined __ANDROID__
+	return getprogname();
+#else
 	return program_invocation_name;
+#endif
 }
 
 void print_error(const char *fmt, ...)
@@ -29,7 +33,11 @@ void print_error(const char *fmt, ...)
 	va_list va;
 
 	va_start(va, fmt);
+#if defined __ANDROID__
+	fprintf(stderr, "%s: ", getprogname());
+#else
 	fprintf(stderr, "%s: ", program_invocation_name);
+#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, "\n");
 	va_end(va);
@@ -40,7 +48,11 @@ void print_perror(const char *fmt, ...)
 	va_list va;
 
 	va_start(va, fmt);
+#if defined __ANDROID__
+	fprintf(stderr, "%s: ", getprogname());
+#else
 	fprintf(stderr, "%s: ", program_invocation_name);
+#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, ": %s\n", strerror(errno));
 	va_end(va);
@@ -51,7 +63,11 @@ void die(const char *fmt, ...)
 	va_list va;
 
 	va_start(va, fmt);
+#if defined __ANDROID__
+	fprintf(stderr, "%s: ", getprogname());
+#else
 	fprintf(stderr, "%s: ", program_invocation_name);
+#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, "\n");
 	va_end(va);
@@ -64,7 +80,11 @@ void die_perror(const char *fmt, ...)
 	va_list va;
 
 	va_start(va, fmt);
+#if defined __ANDROID__
+	fprintf(stderr, "%s: ", getprogname());
+#else
 	fprintf(stderr, "%s: ", program_invocation_name);
+#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, ": %s\n", strerror(errno));
 	va_end(va);
@@ -74,8 +94,13 @@ void die_perror(const char *fmt, ...)
 
 void print_version(void)
 {
+#if defined __ANDROID__
+	printf("%s (libgpiod) v%s\n",
+	       getprogname(), gpiod_api_version());
+#else
 	printf("%s (libgpiod) v%s\n",
 	       program_invocation_short_name, gpiod_api_version());
+#endif
 	printf("Copyright (C) 2017-2023 Bartosz Golaszewski\n");
 	printf("License: GPL-2.0-or-later\n");
 	printf("This is free software: you are free to change and redistribute it.\n");
