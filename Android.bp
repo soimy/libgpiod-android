@@ -52,11 +52,11 @@ cc_binary {
 }
 
 cc_binary {
-    name: "gpiofind",
+    name: "gpionotify",
     vendor: true,
     srcs: [
         "tools/tools-common.c",
-        "tools/gpiofind.c",
+        "tools/gpionotify.c",
     ],
     shared_libs: ["libgpiod"],
     cflags: ["-Werror"],
