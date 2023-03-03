@@ -12,5 +12,5 @@ GPIOD_API bool gpiod_is_gpiochip_device(const char *path)
 
 GPIOD_API const char *gpiod_api_version(void)
 {
-	return GPIOD_VERSION_STR;
+	return "2.0-rc3-dev";
 }
