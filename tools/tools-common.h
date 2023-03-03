@@ -7,6 +7,10 @@
 
 #include <gpiod.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*
  * Various helpers for the GPIO tools.
  *
@@ -117,5 +121,9 @@ const char *get_line_name(struct line_resolver *resolver, int chip_num,
 			  unsigned int offset);
 void set_line_values(struct line_resolver *resolver, int chip_num,
 		     enum gpiod_line_value *values);
+
+#ifdef __cplusplus
+} /* extern "C" */
+#endif
 
 #endif /* __GPIOD_TOOLS_COMMON_H__ */
