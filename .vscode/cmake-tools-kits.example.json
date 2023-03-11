@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Clang Android",
+        "environmentVariables": {
+            "ANDROID_NDK": "C:/Program Files/Unity/Hub/Editor/2021.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK"
+        },
+        "compilers": {
+            "C": "${env:ANDROID_NDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+            "CXX": "${env:ANDROID_NDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+        },
+        "toolchainFile": "${env:ANDROID_NDK}/build/cmake/android.toolchain.cmake",
+        "cmakeSettings": {
+            "CMAKE_INSTALL_PREFIX": "${workspaceFolder}/out/android/${variant:buildType}/${variant:abi}",
+            "ANDROID_TOOLCHAIN": "clang",
+            "ANDROID_NATIVE_API_LEVEL": 28,
+            "ANDROID_STL": "c++_shared",
+            "ANDROID_CPP_FEATURES": "rtti exceptions"
+        }
+    }
+]

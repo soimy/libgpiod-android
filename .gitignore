@@ -35,3 +35,7 @@ stamp-h1
 # profiling
 *.gcda
 *.gcno
+
+#output
+out/
+build/
