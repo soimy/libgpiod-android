@@ -7,14 +7,16 @@ cmake_minimum_required(VERSION 3.22.1)
 
 # Declares and names the project.
 
-project("gpiod")
+project("gpiod" VERSION 2.0)
 
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
 # Gradle automatically packages shared libraries with your APK.
 aux_source_directory(lib/ GPIOD_C_SRC)
-aux_source_directory(bindings/cxx/ GPIOD_CPP_SRC)
+aux_source_directory(include/ GPIOD_C_INC)
+aux_source_directory(tools/ GPIOD_C_TOOLS)
+# aux_source_directory(bindings/cxx/ GPIOD_CPP_SRC)
 add_library( # Sets the name of the library.
         gpiod
 
@@ -23,13 +25,15 @@ add_library( # Sets the name of the library.
 
         # Provides a relative path to your source file(s).
         ${GPIOD_C_SRC}
-        ${GPIOD_CPP_SRC}
+        ${GPIOD_C_INC}
+        # ${GPIOD_C_TOOLS}
+        # ${GPIOD_CPP_SRC}
         )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
 # default, you only need to specify the name of the public NDK library
-# you want to add. CMake verifies that the library exists before
+# you want to add. CMake verifies that the library exists before  
 # completing its build.
 
 # find_library( # Sets the name of the path variable.
@@ -47,13 +51,14 @@ set(CMAKE_EXE_LINKER_FLAGS "-lc++abi")
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
 
-include_directories(${ANDROID_ABI}/)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
-# include_directories(${CMAKE_CURRENT_SOURCE_DIR}/bindings/cxx/)
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libgpiod/tools)
+include_directories(
+        ${ANDROID_ABI}/
+        ${PROJECT_SOURCE_DIR}/include
+        ${PROJECT_SOURCE_DIR}/lib
+        ${PROJECT_SOURCE_DIR}/tools
+        )
 
-target_include_directories(gpiod PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_include_directories(gpiod PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_link_libraries( # Specifies the target library.
         gpiod
 
