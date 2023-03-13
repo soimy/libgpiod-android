@@ -15,8 +15,15 @@ project("gpiod" VERSION 2.0)
 # Gradle automatically packages shared libraries with your APK.
 aux_source_directory(lib/ GPIOD_C_SRC)
 aux_source_directory(include/ GPIOD_C_INC)
-aux_source_directory(tools/ GPIOD_C_TOOLS)
+# aux_source_directory(bindings/csharp/ GPIOD_CS_SRC)
+# aux_source_directory(tools/ GPIOD_C_TOOLS)
 # aux_source_directory(bindings/cxx/ GPIOD_CPP_SRC)
+file(GLOB TOOL_COMMON_SRC
+        "${PROJECT_SOURCE_DIR}/tools/tools-common.c"
+        "${PROJECT_SOURCE_DIR}/tools/tools-common.h"
+        "${PROJECT_SOURCE_DIR}/bindings/csharp/gpiodWrapper.h"
+        )
+
 add_library( # Sets the name of the library.
         gpiod
 
@@ -26,6 +33,8 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         ${GPIOD_C_SRC}
         ${GPIOD_C_INC}
+        ${TOOL_COMMON_SRC}
+        # ${GPIOD_CS_SRC}
         # ${GPIOD_C_TOOLS}
         # ${GPIOD_CPP_SRC}
         )
@@ -44,8 +53,8 @@ add_library( # Sets the name of the library.
 #         log)
 # find_library(cxx-lib libc++)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -stdlib=libc++")
-set(CMAKE_EXE_LINKER_FLAGS "-lc++abi")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -stdlib=libc++")
+# set(CMAKE_EXE_LINKER_FLAGS "-lc++abi")
 
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
@@ -53,12 +62,17 @@ set(CMAKE_EXE_LINKER_FLAGS "-lc++abi")
 
 include_directories(
         ${ANDROID_ABI}/
-        ${PROJECT_SOURCE_DIR}/include
-        ${PROJECT_SOURCE_DIR}/lib
-        ${PROJECT_SOURCE_DIR}/tools
+        ${PROJECT_SOURCE_DIR}/include/
+        ${PROJECT_SOURCE_DIR}/lib/
+        ${PROJECT_SOURCE_DIR}/tools/
+        ${PROJECT_SOURCE_DIR}/bindings/csharp/
         )
 
-target_include_directories(gpiod PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(gpiod PRIVATE 
+        ${PROJECT_SOURCE_DIR}/include/
+        ${PROJECT_SOURCE_DIR}/tools/
+        ${PROJECT_SOURCE_DIR}/bindings/csharp/
+        )
 target_link_libraries( # Specifies the target library.
         gpiod
 
