@@ -3,13 +3,30 @@
         {
             "name": "Android-x64",
             "includePath": [
-                "${workspaceFolder}/lib",
-                "${workspaceFolder}/include",
+                "${workspaceFolder}/lib/",
+                "${workspaceFolder}/include/",
+                "${workspaceFolder}/tools/",
                 "${workspaceFolder}/bindings/cxx/",
-                "${workspaceFolder}/bindings/cxx/gpiodcxx"
+                "${workspaceFolder}/bindings/cxx/gpiodcxx/"
             ],
             "defines": [],
             "compilerPath": "${env:ANDROID_NDK}/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        },
+        {
+            "name": "Android-darwin",
+            "includePath": [
+                "${workspaceFolder}/lib",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/bindings/cxx/",
+                "${workspaceFolder}/bindings/cxx/gpiodcxx",
+                "${workspaceFolder}/include"
+            ],
+            "defines": [],
+            "compilerPath": "${env:UNITY_NDK}/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x64",

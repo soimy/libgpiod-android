@@ -41,6 +41,7 @@ public:
 	using time_point_realtime = ::std::chrono::time_point<::std::chrono::system_clock,
 							      ::std::chrono::nanoseconds>;
 
+	timestamp() {}
 	/**
 	 * @brief Constructor with implicit  conversion from `uint64_t`.
 	 * @param ns Timestamp in nanoseconds.
