@@ -24,9 +24,10 @@ extern "C"
 {
 #endif
 
-EXPORT_CLASS_API static int gpiodetect(char **paths);
-// EXPORT_CLASS_API int gpioget(char *path, int offset);
-// EXPORT_CLASS_API void gpioset(char *path, int offset, int value);
+    EXPORT_CLASS_API static int add(float x, float y);
+    EXPORT_CLASS_API static int gpiodetect();
+    // EXPORT_CLASS_API int gpioget(char *path, int offset);
+    // EXPORT_CLASS_API void gpioset(char *path, int offset, int value);
 
 #ifdef __cplusplus
 } /* extern "C" */

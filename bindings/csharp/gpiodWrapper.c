@@ -28,15 +28,23 @@ static int print_chip_info(const char *path)
 	return 0;
 }
 
-int gpiodetect(char **paths) {
+static int add(float x, float y) {
+	return (int)x + y;
+}
+
+static int gpiodetect() {
 
     int num_chips, i, ret = 0;
+	char **paths;
 
-    num_chips = all_chip_paths(&paths);
+	num_chips = all_chip_paths(&paths);
     for (i = 0; i < num_chips; i++) {
         if (print_chip_info(paths[i]))
             ret = -1;
-    }
 
-    return 0;
+		// free(paths[i]);
+	}
+	// free(paths);
+
+	return num_chips;
 }
