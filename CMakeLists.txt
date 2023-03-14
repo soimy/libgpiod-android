@@ -21,6 +21,7 @@ aux_source_directory(include/ GPIOD_C_INC)
 file(GLOB TOOL_COMMON_SRC
         "${PROJECT_SOURCE_DIR}/tools/tools-common.c"
         "${PROJECT_SOURCE_DIR}/tools/tools-common.h"
+        "${PROJECT_SOURCE_DIR}/bindings/csharp/gpiodWrapper.c"
         "${PROJECT_SOURCE_DIR}/bindings/csharp/gpiodWrapper.h"
         )
 

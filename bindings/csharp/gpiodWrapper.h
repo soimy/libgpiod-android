@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef __GPIOD_CS_WRAPPER_H__
 #define __GPIOD_CS_WRAPPER_H__
 
@@ -17,15 +19,14 @@
 #define EXPORT_CLASS_API __attribute__((visibility("default")))
 #endif
 
-#include <gpiod.h>
-#include "../../tools/tools-common.h"
-
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-    // TODO
+EXPORT_CLASS_API static int gpiodetect(char **paths);
+// EXPORT_CLASS_API int gpioget(char *path, int offset);
+// EXPORT_CLASS_API void gpioset(char *path, int offset, int value);
 
 #ifdef __cplusplus
 } /* extern "C" */
