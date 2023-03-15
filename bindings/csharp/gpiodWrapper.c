@@ -32,19 +32,16 @@ static int add(float x, float y) {
 	return (int)x + y;
 }
 
-static int gpiodetect() {
+static int gpiodetect(char **outPaths) {
 
     int num_chips, i, ret = 0;
-	char **paths;
+	// char **paths;
 
-	num_chips = all_chip_paths(&paths);
+	num_chips = all_chip_paths(&outPaths);
     for (i = 0; i < num_chips; i++) {
-        if (print_chip_info(paths[i]))
+        if (print_chip_info(outPaths[i]))
             ret = -1;
-
-		// free(paths[i]);
 	}
-	// free(paths);
 
 	return num_chips;
 }
