@@ -24,8 +24,9 @@ extern "C"
 {
 #endif
 
-    EXPORT_CLASS_API static int add(float x, float y);
-    EXPORT_CLASS_API static int gpiodetect(char **outPaths);
+    int add(float x, float y);
+    int gpiodetect(char ***outPaths);
+    int print_chip_info(const char *path);
     // EXPORT_CLASS_API int gpioget(char *path, int offset);
     // EXPORT_CLASS_API void gpioset(char *path, int offset, int value);
 
