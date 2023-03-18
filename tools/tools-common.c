@@ -19,6 +19,13 @@
 
 #include "tools-common.h"
 
+#if defined __ANDROID__
+#include <android/log.h>
+#define LOG_TAG "gpiod"
+#define LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
+#define LOGE(...)  __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+#endif
+
 const char *get_progname(void)
 {
 #if defined __ANDROID__
@@ -34,12 +41,13 @@ void print_error(const char *fmt, ...)
 
 	va_start(va, fmt);
 #if defined __ANDROID__
-	fprintf(stderr, "%s: ", getprogname());
+	LOGE("%s: ", getprogname());
+	LOGE(fmt, va);
 #else
 	fprintf(stderr, "%s: ", program_invocation_name);
-#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, "\n");
+#endif
 	va_end(va);
 }
 
@@ -49,12 +57,13 @@ void print_perror(const char *fmt, ...)
 
 	va_start(va, fmt);
 #if defined __ANDROID__
-	fprintf(stderr, "%s: ", getprogname());
+	LOGE("%s: ", getprogname());
+	LOGE(fmt, va);
 #else
 	fprintf(stderr, "%s: ", program_invocation_name);
-#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, ": %s\n", strerror(errno));
+#endif
 	va_end(va);
 }
 
@@ -64,12 +73,13 @@ void die(const char *fmt, ...)
 
 	va_start(va, fmt);
 #if defined __ANDROID__
-	fprintf(stderr, "%s: ", getprogname());
+	LOGE("%s: ", getprogname());
+	LOGE(fmt, va);
 #else
 	fprintf(stderr, "%s: ", program_invocation_name);
-#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, "\n");
+#endif
 	va_end(va);
 
 	exit(EXIT_FAILURE);
@@ -81,12 +91,13 @@ void die_perror(const char *fmt, ...)
 
 	va_start(va, fmt);
 #if defined __ANDROID__
-	fprintf(stderr, "%s: ", getprogname());
+	LOGE("%s: ", getprogname());
+	LOGE(fmt, va);
 #else
 	fprintf(stderr, "%s: ", program_invocation_name);
-#endif
 	vfprintf(stderr, fmt, va);
 	fprintf(stderr, ": %s\n", strerror(errno));
+#endif
 	va_end(va);
 
 	exit(EXIT_FAILURE);

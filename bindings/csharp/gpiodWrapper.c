@@ -8,38 +8,49 @@
 #define LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define LOGE(...)  __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 
-int print_chip_info(const char *path)
+static void log_line_info(int offset, struct gpiod_line_info *info)
 {
-	struct gpiod_chip_info *info;
+	const char *name = gpiod_line_info_get_name(info);
+	LOGD("%d : %-16s\t%s", 
+			offset,
+			name ? name : "unnamed",
+			gpiod_line_info_get_direction(info) == GPIOD_LINE_DIRECTION_INPUT ?  "input" : "output"
+			);
+	//
+}
+static int log_chip_info(const char *path, bool line_info)
+{
+	struct gpiod_chip_info *chip_info;
 	struct gpiod_chip *chip;
 
 	chip = gpiod_chip_open(path);
 	if (!chip) {
-		// print_perror("unable to open chip '%s'", path);
 		LOGE("unable to open chip '%s'", path);
 		return 1;
 	}
 
-	info = gpiod_chip_get_info(chip);
-	if (!info)
-		// die_perror("unable to read info for '%s'", path);
+	chip_info = gpiod_chip_get_info(chip);
+	if (!chip_info)
 		LOGE("unable to read info for '%s'", path);
 
-	// printf("%s [%s] (%zu lines)\n", gpiod_chip_info_get_name(info),
-	    //    gpiod_chip_info_get_label(info),
-	    //    gpiod_chip_info_get_num_lines(info));
-	LOGD("%s [%s] (%zu lines)\n", gpiod_chip_info_get_name(info),
-	       gpiod_chip_info_get_label(info),
-	       gpiod_chip_info_get_num_lines(info));
+	LOGD("%s [%s] (%zu lines)\n", gpiod_chip_info_get_name(chip_info),
+	       gpiod_chip_info_get_label(chip_info),
+	       gpiod_chip_info_get_num_lines(chip_info));
 
-	gpiod_chip_info_free(info);
+	if (line_info) {
+		// print all line name based on offset
+		struct gpiod_line_info *info;
+		for (int offset = 0; offset < gpiod_chip_info_get_num_lines(chip_info); offset++) {
+			info = gpiod_chip_get_line_info(chip, offset);
+			log_line_info(offset, info);
+		}
+		gpiod_line_info_free(info);
+	}
+
+	gpiod_chip_info_free(chip_info);
 	gpiod_chip_close(chip);
 
 	return 0;
-}
-
-int add(float x, float y) {
-	return (int)x + y;
 }
 
 int gpiodetect(char ***outPaths) {
@@ -49,7 +60,7 @@ int gpiodetect(char ***outPaths) {
 
 	num_chips = all_chip_paths(&paths);
     for (i = 0; i < num_chips; i++) {
-        if (print_chip_info(paths[i]))
+        if (log_chip_info(paths[i], false))
             ret = -1;
 	}
 	*outPaths = paths;
