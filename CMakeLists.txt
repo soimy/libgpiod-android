@@ -66,13 +66,11 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/include/
         ${PROJECT_SOURCE_DIR}/lib/
         ${PROJECT_SOURCE_DIR}/tools/
-        ${PROJECT_SOURCE_DIR}/bindings/csharp/
         )
 
 target_include_directories(gpiod PRIVATE 
         ${PROJECT_SOURCE_DIR}/include/
         ${PROJECT_SOURCE_DIR}/tools/
-        ${PROJECT_SOURCE_DIR}/bindings/csharp/
         )
 target_link_libraries( # Specifies the target library.
         gpiod
@@ -81,4 +79,8 @@ target_link_libraries( # Specifies the target library.
         # included in the NDK.
         ${log-lib}
         # ${cxx-lib}
-        )
+)
+
+add_subdirectory(
+        ${PROJECT_SOURCE_DIR}/bindings/csharp/
+)
