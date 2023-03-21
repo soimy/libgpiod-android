@@ -64,7 +64,6 @@ find_library( # Sets the name of the path variable.
 include_directories(
         ${ANDROID_ABI}/
         ${PROJECT_SOURCE_DIR}/include/
-        ${PROJECT_SOURCE_DIR}/lib/
         ${PROJECT_SOURCE_DIR}/tools/
         )
 

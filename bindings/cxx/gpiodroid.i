@@ -6,7 +6,7 @@
 %}
 // Define the __attribute__ macro because SWIG doesn't know of its existence
 // and gets confused.
-// #define __attribute__(x)
+#define __attribute__(x)
 
 // This is really ugly to manually define the timespec type from time.h
 // however SWIG can't process the file.  This seems like a shocking omission
