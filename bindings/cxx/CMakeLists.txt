@@ -58,7 +58,7 @@ set_property(
 
 # create a SWIG module
 set_source_files_properties(gpiodroid.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-namespace;gpiodroid")
+set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;")
 # set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-includeall")
 # set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-outfile gpiodroid_csharp.cs")
 swig_add_library(
