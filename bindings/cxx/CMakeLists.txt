@@ -3,7 +3,7 @@ if (POLICY CMP0122)
     cmake_policy(SET CMP0122 NEW)
 endif()
 
-project(gpiodroid)
+project(gpiodcxx)
 
 # set C++ standard
 set(CMAKE_CXX_STANDARD 17)
@@ -13,8 +13,7 @@ find_package(SWIG REQUIRED)
 include(${SWIG_USE_FILE})
 
 # set output directories for generated files
-set(CMAKE_SWIG_OUTDIR ${CMAKE_SOURCE_DIR}/bindings/csharp/swig_cxx)
-# set(SWIG_OUTFILE_NAME gpiodroid.cs)
+set(CMAKE_SWIG_OUTDIR ${CMAKE_SOURCE_DIR}/bindings/csharp/)
 
 # add include directories
 include_directories(
@@ -30,7 +29,7 @@ aux_source_directory(${CMAKE_SOURCE_DIR}/bindings/cxx SRC)
 # add library source files
 add_library(
     # name of the library
-    gpiodroid
+    gpiodcxx
     # sets library as a shared library
     SHARED
     # path to the src
@@ -40,7 +39,7 @@ add_library(
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
-target_include_directories(gpiodroid PUBLIC 
+target_include_directories(gpiodcxx PUBLIC 
     ${PROJECT_SOURCE_DIR}/include/
     ${PROJECT_SOURCE_DIR}/tools/
     ${PROJECT_SOURCE_DIR}/bindings/cxx/
@@ -48,27 +47,26 @@ target_include_directories(gpiodroid PUBLIC
 )
 
 # add library dependencies
-target_link_libraries(gpiodroid gpiod)
+target_link_libraries(gpiodcxx gpiod)
 
-set_property(
-    TARGET gpiodroid 
-    PROPERTY
-        SWIG_USE_TARGET_INCLUDE_DIRECTORIES TRUE
-)
+# set_property(
+#     TARGET gpiodcxx 
+#     PROPERTY
+#         SWIG_USE_TARGET_INCLUDE_DIRECTORIES TRUE
+# )
 
 # create a SWIG module
-set_source_files_properties(gpiodroid.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;")
-# set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-includeall")
-# set_source_files_properties(gpiodroid.i PROPERTIES SWIG_FLAGS "-outfile gpiodroid_csharp.cs")
+set_source_files_properties(gpiodcxx.i PROPERTIES CPLUSPLUS ON)
+set_source_files_properties(gpiodcxx.i PROPERTIES SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;")
+
 swig_add_library(
-    gpiodroid_csharp
+    gpiodroid
     LANGUAGE csharp
-    SOURCES gpiodroid.i
+    SOURCES gpiodcxx.i
 )
 
 swig_link_libraries(
-    gpiodroid_csharp
     gpiodroid
+    gpiodcxx
 )
 
