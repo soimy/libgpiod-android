@@ -3,21 +3,6 @@
 // Add necessary symbols to generate header
 %{
 #include "gpiod.hpp"
-#include "gpiodcxx/chip-info.hpp"
-#include "gpiodcxx/chip.hpp"
-#include "gpiodcxx/edge-event-buffer.hpp"
-#include "gpiodcxx/edge-event.hpp"
-#include "gpiodcxx/exception.hpp"
-#include "gpiodcxx/info-event.hpp"
-#include "gpiodcxx/line-config.hpp"
-#include "gpiodcxx/line-info.hpp"
-#include "gpiodcxx/line-request.hpp"
-#include "gpiodcxx/line-settings.hpp"
-#include "gpiodcxx/line.hpp"
-#include "gpiodcxx/misc.hpp"
-#include "gpiodcxx/request-builder.hpp"
-#include "gpiodcxx/request-config.hpp"
-#include "gpiodcxx/timestamp.hpp"
 using namespace gpiod;
 %}
 // Define the __attribute__ macro because SWIG doesn't know of its existence

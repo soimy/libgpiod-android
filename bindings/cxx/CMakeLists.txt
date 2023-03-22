@@ -57,7 +57,9 @@ target_link_libraries(gpiodcxx gpiod)
 
 # create a SWIG module
 set_source_files_properties(gpiodcxx.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(gpiodcxx.i PROPERTIES SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;")
+set_source_files_properties(gpiodcxx.i PROPERTIES 
+    SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;"
+)
 
 swig_add_library(
     gpiodroid
