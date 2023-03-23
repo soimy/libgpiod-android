@@ -1541,7 +1541,7 @@ class gpiodroidPINVOKE {
     static ExceptionArgumentDelegate argumentNullDelegate = new ExceptionArgumentDelegate(SetPendingArgumentNullException);
     static ExceptionArgumentDelegate argumentOutOfRangeDelegate = new ExceptionArgumentDelegate(SetPendingArgumentOutOfRangeException);
 
-    [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="SWIGRegisterExceptionCallbacks_gpiodroid")]
+    [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="SWIGRegisterExceptionCallbacks_gpiodroid")]
     public static extern void SWIGRegisterExceptionCallbacks_gpiodroid(
                                 ExceptionDelegate applicationDelegate,
                                 ExceptionDelegate arithmeticDelegate,
@@ -1555,7 +1555,7 @@ class gpiodroidPINVOKE {
                                 ExceptionDelegate overflowDelegate, 
                                 ExceptionDelegate systemExceptionDelegate);
 
-    [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_gpiodroid")]
+    [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="SWIGRegisterExceptionArgumentCallbacks_gpiodroid")]
     public static extern void SWIGRegisterExceptionCallbacksArgument_gpiodroid(
                                 ExceptionArgumentDelegate argumentDelegate,
                                 ExceptionArgumentDelegate argumentNullDelegate,
@@ -1682,7 +1682,7 @@ class gpiodroidPINVOKE {
     public delegate string SWIGStringDelegate(string message);
     static SWIGStringDelegate stringDelegate = new SWIGStringDelegate(CreateString);
 
-    [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="SWIGRegisterStringCallback_gpiodroid")]
+    [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="SWIGRegisterStringCallback_gpiodroid")]
     public static extern void SWIGRegisterStringCallback_gpiodroid(SWIGStringDelegate stringDelegate);
 
     static string CreateString(string cString) {
@@ -1701,427 +1701,427 @@ class gpiodroidPINVOKE {
   }
 
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_info__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_info__SWIG_0")]
   public static extern global::System.IntPtr new_chip_info__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip_info")]
   public static extern void delete_chip_info(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_name")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_name")]
   public static extern global::System.IntPtr chip_info_name(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_label")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_label")]
   public static extern global::System.IntPtr chip_info_label(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_num_lines")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_info_num_lines")]
   public static extern global::System.IntPtr chip_info_num_lines(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_chip__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_chip__SWIG_0")]
   public static extern global::System.IntPtr new_chip__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_chip__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_chip__SWIG_1")]
   public static extern global::System.IntPtr new_chip__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip")]
   public static extern void delete_chip(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_close")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_close")]
   public static extern void chip_close(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_path")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_path")]
   public static extern global::System.IntPtr chip_path(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_info")]
   public static extern global::System.IntPtr chip_get_info(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_line_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_line_info")]
   public static extern global::System.IntPtr chip_get_line_info(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_watch_line_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_watch_line_info")]
   public static extern global::System.IntPtr chip_watch_line_info(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_unwatch_line_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_unwatch_line_info")]
   public static extern void chip_unwatch_line_info(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_fd")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_fd")]
   public static extern int chip_fd(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_wait_info_event")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_wait_info_event")]
   public static extern bool chip_wait_info_event(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_read_info_event")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_read_info_event")]
   public static extern global::System.IntPtr chip_read_info_event(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_line_offset_from_name")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_get_line_offset_from_name")]
   public static extern int chip_get_line_offset_from_name(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_chip_prepare_request")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_chip_prepare_request")]
   public static extern global::System.IntPtr chip_prepare_request(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_0")]
   public static extern global::System.IntPtr new_edge_event_buffer__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_1")]
   public static extern global::System.IntPtr new_edge_event_buffer__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event_buffer__SWIG_2")]
   public static extern global::System.IntPtr new_edge_event_buffer__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_edge_event_buffer")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_edge_event_buffer")]
   public static extern void delete_edge_event_buffer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_get_event")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_get_event")]
   public static extern global::System.IntPtr edge_event_buffer_get_event(global::System.Runtime.InteropServices.HandleRef jarg1, uint jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_num_events")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_num_events")]
   public static extern global::System.IntPtr edge_event_buffer_num_events(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_capacity")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_capacity")]
   public static extern global::System.IntPtr edge_event_buffer_capacity(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_begin")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_begin")]
   public static extern global::System.IntPtr edge_event_buffer_begin(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_end")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_buffer_end")]
   public static extern global::System.IntPtr edge_event_buffer_end(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_edge_event__SWIG_0")]
   public static extern global::System.IntPtr new_edge_event__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_edge_event")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_edge_event")]
   public static extern void delete_edge_event(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_type")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_type")]
   public static extern int edge_event_type(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_timestamp_ns")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_timestamp_ns")]
   public static extern global::System.IntPtr edge_event_timestamp_ns(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_line_offset")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_line_offset")]
   public static extern global::System.IntPtr edge_event_line_offset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_global_seqno")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_global_seqno")]
   public static extern uint edge_event_global_seqno(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_line_seqno")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_edge_event_line_seqno")]
   public static extern uint edge_event_line_seqno(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_closed__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_closed__SWIG_0")]
   public static extern global::System.IntPtr new_chip_closed__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_closed__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_chip_closed__SWIG_1")]
   public static extern global::System.IntPtr new_chip_closed__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip_closed")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_chip_closed")]
   public static extern void delete_chip_closed(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_request_released__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_request_released__SWIG_0")]
   public static extern global::System.IntPtr new_request_released__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_request_released__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_request_released__SWIG_1")]
   public static extern global::System.IntPtr new_request_released__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_released")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_released")]
   public static extern void delete_request_released(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_bad_mapping__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_bad_mapping__SWIG_0")]
   public static extern global::System.IntPtr new_bad_mapping__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_bad_mapping__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_bad_mapping__SWIG_1")]
   public static extern global::System.IntPtr new_bad_mapping__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_bad_mapping")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_bad_mapping")]
   public static extern void delete_bad_mapping(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_info_event__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_info_event__SWIG_0")]
   public static extern global::System.IntPtr new_info_event__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_info_event")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_info_event")]
   public static extern void delete_info_event(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_info_event_type")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_info_event_type")]
   public static extern int info_event_type(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_info_event_timestamp_ns")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_info_event_timestamp_ns")]
   public static extern global::System.IntPtr info_event_timestamp_ns(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_info_event_get_line_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_info_event_get_line_info")]
   public static extern global::System.IntPtr info_event_get_line_info(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_config__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_config__SWIG_0")]
   public static extern global::System.IntPtr new_line_config__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_config__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_config__SWIG_1")]
   public static extern global::System.IntPtr new_line_config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_config")]
   public static extern void delete_line_config(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_config_reset")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_config_reset")]
   public static extern global::System.IntPtr line_config_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_config_add_line_settings__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_config_add_line_settings__SWIG_0")]
   public static extern global::System.IntPtr line_config_add_line_settings__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_config_add_line_settings__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_config_add_line_settings__SWIG_1")]
   public static extern global::System.IntPtr line_config_add_line_settings__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_config_set_output_values")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_config_set_output_values")]
   public static extern global::System.IntPtr line_config_set_output_values(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_config_get_line_settings")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_config_get_line_settings")]
   public static extern global::System.IntPtr line_config_get_line_settings(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_info__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_info__SWIG_0")]
   public static extern global::System.IntPtr new_line_info__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_info")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_info")]
   public static extern void delete_line_info(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_offset")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_offset")]
   public static extern global::System.IntPtr line_info_offset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_name")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_name")]
   public static extern global::System.IntPtr line_info_name(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_used")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_used")]
   public static extern bool line_info_used(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_consumer")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_consumer")]
   public static extern global::System.IntPtr line_info_consumer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_direction")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_direction")]
   public static extern global::System.IntPtr line_info_direction(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_edge_detection")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_edge_detection")]
   public static extern global::System.IntPtr line_info_edge_detection(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_bias")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_bias")]
   public static extern global::System.IntPtr line_info_bias(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_drive")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_drive")]
   public static extern global::System.IntPtr line_info_drive(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_active_low")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_active_low")]
   public static extern bool line_info_active_low(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_debounced")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_debounced")]
   public static extern bool line_info_debounced(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_debounce_period")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_debounce_period")]
   public static extern global::System.IntPtr line_info_debounce_period(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_info_event_clock")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_info_event_clock")]
   public static extern global::System.IntPtr line_info_event_clock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_request")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_request")]
   public static extern global::System.IntPtr new_line_request(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_request")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_request")]
   public static extern void delete_line_request(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_release")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_release")]
   public static extern void line_request_release(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_num_lines")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_num_lines")]
   public static extern global::System.IntPtr line_request_num_lines(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_offsets")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_offsets")]
   public static extern global::System.IntPtr line_request_offsets(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_value")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_value")]
   public static extern global::System.IntPtr line_request_get_value(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_0")]
   public static extern global::System.IntPtr line_request_get_values__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_1")]
   public static extern global::System.IntPtr line_request_get_values__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_2")]
   public static extern void line_request_get_values__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_3")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_get_values__SWIG_3")]
   public static extern void line_request_get_values__SWIG_3(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_value")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_value")]
   public static extern global::System.IntPtr line_request_set_value(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_0")]
   public static extern global::System.IntPtr line_request_set_values__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_1")]
   public static extern global::System.IntPtr line_request_set_values__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_set_values__SWIG_2")]
   public static extern global::System.IntPtr line_request_set_values__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_reconfigure_lines")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_reconfigure_lines")]
   public static extern global::System.IntPtr line_request_reconfigure_lines(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_fd")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_fd")]
   public static extern int line_request_fd(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_wait_edge_events")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_wait_edge_events")]
   public static extern bool line_request_wait_edge_events(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_read_edge_events__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_read_edge_events__SWIG_0")]
   public static extern global::System.IntPtr line_request_read_edge_events__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_request_read_edge_events__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_request_read_edge_events__SWIG_1")]
   public static extern global::System.IntPtr line_request_read_edge_events__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_settings__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_settings__SWIG_0")]
   public static extern global::System.IntPtr new_line_settings__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_line_settings__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_line_settings__SWIG_1")]
   public static extern global::System.IntPtr new_line_settings__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_settings")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_line_settings")]
   public static extern void delete_line_settings(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_reset")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_reset")]
   public static extern global::System.IntPtr line_settings_reset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_direction")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_direction")]
   public static extern global::System.IntPtr line_settings_set_direction(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_direction")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_direction")]
   public static extern global::System.IntPtr line_settings_direction(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_edge_detection")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_edge_detection")]
   public static extern global::System.IntPtr line_settings_set_edge_detection(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_edge_detection")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_edge_detection")]
   public static extern global::System.IntPtr line_settings_edge_detection(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_bias")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_bias")]
   public static extern global::System.IntPtr line_settings_set_bias(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_bias")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_bias")]
   public static extern global::System.IntPtr line_settings_bias(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_drive")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_drive")]
   public static extern global::System.IntPtr line_settings_set_drive(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_drive")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_drive")]
   public static extern global::System.IntPtr line_settings_drive(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_active_low")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_active_low")]
   public static extern global::System.IntPtr line_settings_set_active_low(global::System.Runtime.InteropServices.HandleRef jarg1, bool jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_active_low")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_active_low")]
   public static extern bool line_settings_active_low(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_debounce_period")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_debounce_period")]
   public static extern global::System.IntPtr line_settings_set_debounce_period(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_debounce_period")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_debounce_period")]
   public static extern global::System.IntPtr line_settings_debounce_period(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_event_clock")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_event_clock")]
   public static extern global::System.IntPtr line_settings_set_event_clock(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_event_clock")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_event_clock")]
   public static extern global::System.IntPtr line_settings_event_clock(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_output_value")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_set_output_value")]
   public static extern global::System.IntPtr line_settings_set_output_value(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_output_value")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_line_settings_output_value")]
   public static extern global::System.IntPtr line_settings_output_value(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_0")]
   public static extern global::System.IntPtr new_offset__SWIG_0(uint jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_1")]
   public static extern global::System.IntPtr new_offset__SWIG_1();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_offset__SWIG_2")]
   public static extern global::System.IntPtr new_offset__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_offset")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_offset")]
   public static extern void delete_offset(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_is_gpiochip_device")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_is_gpiochip_device")]
   public static extern bool is_gpiochip_device(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_api_version")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_api_version")]
   public static extern global::System.IntPtr api_version();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_request_builder")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_request_builder")]
   public static extern global::System.IntPtr new_request_builder(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_builder")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_builder")]
   public static extern void delete_request_builder(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_request_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_request_config")]
   public static extern global::System.IntPtr request_builder_set_request_config(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_get_request_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_get_request_config")]
   public static extern global::System.IntPtr request_builder_get_request_config(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_consumer")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_consumer")]
   public static extern global::System.IntPtr request_builder_set_consumer(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_event_buffer_size")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_event_buffer_size")]
   public static extern global::System.IntPtr request_builder_set_event_buffer_size(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_line_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_set_line_config")]
   public static extern global::System.IntPtr request_builder_set_line_config(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_get_line_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_get_line_config")]
   public static extern global::System.IntPtr request_builder_get_line_config(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_add_line_settings__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_add_line_settings__SWIG_0")]
   public static extern global::System.IntPtr request_builder_add_line_settings__SWIG_0(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_add_line_settings__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_add_line_settings__SWIG_1")]
   public static extern global::System.IntPtr request_builder_add_line_settings__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2, global::System.Runtime.InteropServices.HandleRef jarg3);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_do_request")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_builder_do_request")]
   public static extern global::System.IntPtr request_builder_do_request(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_request_config__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_request_config__SWIG_0")]
   public static extern global::System.IntPtr new_request_config__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_request_config__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_request_config__SWIG_1")]
   public static extern global::System.IntPtr new_request_config__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_config")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_request_config")]
   public static extern void delete_request_config(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_config_set_consumer")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_config_set_consumer")]
   public static extern global::System.IntPtr request_config_set_consumer(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_config_consumer")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_config_consumer")]
   public static extern global::System.IntPtr request_config_consumer(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_config_set_event_buffer_size")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_config_set_event_buffer_size")]
   public static extern global::System.IntPtr request_config_set_event_buffer_size(global::System.Runtime.InteropServices.HandleRef jarg1, global::System.Runtime.InteropServices.HandleRef jarg2);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_request_config_event_buffer_size")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_request_config_event_buffer_size")]
   public static extern global::System.IntPtr request_config_event_buffer_size(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_0")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_0")]
   public static extern global::System.IntPtr new_timestamp__SWIG_0();
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_1")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_1")]
   public static extern global::System.IntPtr new_timestamp__SWIG_1(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_2")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_new_timestamp__SWIG_2")]
   public static extern global::System.IntPtr new_timestamp__SWIG_2(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_delete_timestamp")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_delete_timestamp")]
   public static extern void delete_timestamp(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_ns")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_ns")]
   public static extern global::System.IntPtr timestamp_ns(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_to_time_point_monotonic")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_to_time_point_monotonic")]
   public static extern global::System.IntPtr timestamp_to_time_point_monotonic(global::System.Runtime.InteropServices.HandleRef jarg1);
 
-  [global::System.Runtime.InteropServices.DllImport("libgpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_to_time_point_realtime")]
+  [global::System.Runtime.InteropServices.DllImport("gpiodroid", EntryPoint="CSharp_gpiodroid_timestamp_to_time_point_realtime")]
   public static extern global::System.IntPtr timestamp_to_time_point_realtime(global::System.Runtime.InteropServices.HandleRef jarg1);
 }
 

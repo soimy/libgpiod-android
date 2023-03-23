@@ -8,6 +8,17 @@ project(gpiodcxx)
 # set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 
+# copy libc++_shared.so to the output directory
+function(configure_shared_stl lib_path so_base)
+    message("Configuring STL ${so_base} for ${ANDROID_ABI}")
+    message("Copying ${ANDROID_NDK}/sources/cxx-stl/${lib_path}/libs/${ANDROID_ABI}/lib${so_base}.so to ${PROJECT_BINARY_DIR}/lib${so_base}.so")
+    configure_file(
+        "${ANDROID_NDK}/sources/cxx-stl/${lib_path}/libs/${ANDROID_ABI}/lib${so_base}.so" 
+        "${CMAKE_CURRENT_BINARY_DIR}/lib${so_base}.so" 
+        COPYONLY)
+endfunction()
+configure_shared_stl("llvm-libc++" "c++_shared")
+
 # find SWIG
 find_package(SWIG REQUIRED)
 include(${SWIG_USE_FILE})
@@ -56,10 +67,11 @@ target_link_libraries(gpiodcxx gpiod)
 # )
 
 # create a SWIG module
-set_source_files_properties(gpiodcxx.i PROPERTIES CPLUSPLUS ON)
-set_source_files_properties(gpiodcxx.i PROPERTIES 
-    SWIG_FLAGS "-namespace;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;"
-)
+set_property(SOURCE gpiodcxx.i PROPERTY CPLUSPLUS ON)
+set_property(SOURCE gpiodcxx.i PROPERTY SWIG_FLAGS "-namespace;gpiodroid;-dllimport;gpiodroid;-outfile;gpiodroid.cs;-cpperraswarn;")
+set_property(SOURCE gpiodcxx.i PROPERTY SWIG_MODULE_NAME gpiodroid)
+set_property(SOURCE gpiodcxx.i PROPERTY USE_SWIG_DEPENDENCIES TRUE)
+set_property(SOURCE gpiodcxx.i PROPERTY SWIG_USE_TARGET_INCLUDE_DIRECTORIES TRUE)
 
 swig_add_library(
     gpiodroid
